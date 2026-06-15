@@ -1,159 +1,119 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jouw SMP</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="style.css">
+<title>Mijn SMP</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
 <header>
 
-    <h1>JOUW SMP</h1>
+<h1>MIJN SMP</h1>
 
-    <p class="subtitle">
-        De ultieme Minecraft Survival Multiplayer
-    </p>
+<p class="subtitle">
+De ultieme Minecraft SMP ervaring
+</p>
 
-    <div class="countdown" id="countdown">
-        Launch binnenkort...
-    </div>
+<div class="countdown" id="countdown">
+Binnenkort geopend...
+</div>
 
-    <a href="#" class="discord-btn">
-        Join Discord
-    </a>
+<a href="#" class="discord-btn">
+Discord
+</a>
 
 </header>
 
 <section class="roadmap">
 
-    <h2 class="section-title">Roadmap</h2>
+<h2 class="section-title">Roadmap</h2>
 
-    <div class="timeline">
+<div class="timeline">
 
-        <div class="step active">
-            <div class="circle">✓</div>
-            <h3>Start</h3>
-            <p>Dag 1</p>
-        </div>
+<div class="step active">
+<div class="circle">✓</div>
+<h3>Server Start</h3>
+<p>Dag 1</p>
+</div>
 
-        <div class="step active">
-            <div class="circle">✓</div>
-            <h3>Nether</h3>
-            <p>Dag 3</p>
-        </div>
+<div class="step">
+<div class="circle">🔒</div>
+<h3>Nether</h3>
+<p>Dag 3</p>
+</div>
 
-        <div class="step">
-            <div class="circle">🔒</div>
-            <h3>The End</h3>
-            <p>Dag 7</p>
-        </div>
+<div class="step">
+<div class="circle">🔒</div>
+<h3>The End</h3>
+<p>Dag 7</p>
+</div>
 
-        <div class="step">
-            <div class="circle">🔒</div>
-            <h3>Elytra</h3>
-            <p>Dag 14</p>
-        </div>
+<div class="step">
+<div class="circle">🔒</div>
+<h3>Elytra</h3>
+<p>Dag 14</p>
+</div>
 
-        <div class="step">
-            <div class="circle">🔒</div>
-            <h3>Event</h3>
-            <p>Dag 21</p>
-        </div>
+<div class="step">
+<div class="circle">🔒</div>
+<h3>Event</h3>
+<p>Dag 21</p>
+</div>
 
-    </div>
-
-</section>
-
-<section>
-
-    <h2 class="section-title">Server Informatie</h2>
-
-    <div class="status-card">
-
-        <h3>Server Status</h3>
-
-        <p class="online">
-            🟢 Online
-        </p>
-
-        <br>
-
-        <p>
-            Versie: 1.21.x
-        </p>
-
-        <p>
-            Gamemode: Survival
-        </p>
-
-        <p>
-            Difficulty: Hard
-        </p>
-
-    </div>
+</div>
 
 </section>
 
 <section>
 
-    <h2 class="section-title">Deelnemers</h2>
+<h2 class="section-title">Server Info</h2>
 
-    <div class="players">
+<div class="status-card">
 
-        <div class="player-card">
-            <img src="https://mc-heads.net/avatar/Steve">
-            <h3>Speler 1</h3>
-        </div>
+<h3>Server Status</h3>
 
-        <div class="player-card">
-            <img src="https://mc-heads.net/avatar/Alex">
-            <h3>Speler 2</h3>
-        </div>
+<p class="online">
+🟢 Online
+</p>
 
-        <div class="player-card">
-            <img src="https://mc-heads.net/avatar/Dream">
-            <h3>Speler 3</h3>
-        </div>
+<br>
 
-        <div class="player-card">
-            <img src="https://mc-heads.net/avatar/Technoblade">
-            <h3>Speler 4</h3>
-        </div>
+<p>Versie: 1.21+</p>
+<p>Gamemode: Survival</p>
+<p>Moeilijkheid: Hard</p>
 
-    </div>
+</div>
 
 </section>
 
-<footer>
-    © 2025 Jouw SMP - Alle rechten voorbehouden.
-</footer>
+<section>
 
-<script>
+<h2 class="section-title">Deelnemers</h2>
 
-const launchDate = new Date("2025-12-01T20:00:00").getTime();
+<div class="players">
 
-setInterval(() => {
+<div class="player-card">
+<img src="https://mc-heads.net/avatar/Steve">
+<h3>Speler 1</h3>
+</div>
 
-    const now = new Date().getTime();
-    const distance = launchDate - now;
+<div class="player-card">
+<img src="https://mc-heads.net/avatar/Alex">
+<h3>Speler 2</h3>
+</div>
 
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+<div class="player-card">
+<img src="https://mc-heads.net/avatar/Dream">
+<h3>Speler 3</h3>
+</div>
 
-    document.getElementById("countdown").innerHTML =
-        days + " dagen " +
-        hours + " uur " +
-        minutes + " min";
-
-}, 1000);
-
-</script>
-
-</body>
-</html>
+<div class="player-card">
+<img src="https://mc-heads.net/avatar/Technoblade">
+<h3>Speler 4</
