@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Jouw SMP</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Orbitron',sans-serif;
+background:linear-gradient(180deg,#2b0000,#570000,#2b0000);
+color:white;
+}
+
+header{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+h1{
+font-size:5rem;
+color:#f7c948;
+text-shadow:0 0 20px rgba(247,201,72,.8);
+}
+
+.subtitle{
+margin-top:10px;
+font-size:1.2rem;
+opacity:.8;
+}
+
+.countdown{
+margin-top:30px;
+font-size:2rem;
+background:rgba(0,0,0,.35);
+padding:20px 40px;
+border-radius:15px;
+border:2px solid #f7c948;
+}
+
+.discord-btn{
+margin-top:30px;
+display:inline-block;
+padding:15px 35px;
+background:#f7c948;
+color:black;
+text-decoration:none;
+font-weight:bold;
+border-radius:10px;
+transition:.3s;
+}
+
+.discord-btn:hover{
+transform:scale(1.05);
+}
+
+section{
+padding:80px 10%;
+}
+
+.section-title{
+font-size:3rem;
+text-align:center;
+color:#f7c948;
+margin-bottom:50px;
+}
+
+.timeline{
+max-width:900px;
+margin:auto;
+}
+
+.timeline-item{
+background:rgba(0,0,0,.35);
+border-left:5px solid #f7c948;
+padding:25px;
+margin-bottom:20px;
+border-radius:12px;
+}
+
+.timeline-item h3{
+color:#f7c948;
+margin-bottom:10px;
+}
+
+.players{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:20px;
+}
+
+.player-card{
+background:rgba(0,0,0,.35);
+padding:15px;
+border-radius:12px;
+text-align:center;
+transition:.3s;
+}
+
+.player-card:hover{
+transform:translateY(-5px);
+}
+
+.player-card img{
+width:100%;
+border-radius:10px;
+}
+
+.player-card h3{
+margin-top:10px;
+}
+
+footer{
+padding:40px;
+text-align:center;
+background:#180000;
+}
+
+</style>
+</head>
+<body>
+
+<header>
+
+<h1>JOUW SMP</h1>
+
+<p class="subtitle">
+Season 1 • Survival • Community
+</p>
+
+<div class="countdown" id="countdown">
+Laden...
+</div>
+
+<a href="#" class="discord-btn">
+Discord Joinen
+</a>
+
+</header>
+
+<section>
+
+<h2 class="section-title">Tijdlijn</h2>
+
+<div class="timeline">
+
+<div class="timeline-item">
+<h3>🚀 Dag 1</h3>
+<p>Server opent</p>
+</div>
+
+<div class="timeline-item">
+<h3>🔥 Dag 3</h3>
+<p>Nether opent</p>
+</div>
+
+<div class="timeline-item">
+<h3>👁️ Dag 7</h3>
+<p>The End opent</p>
+</div>
+
+<div class="timeline-item">
+<h3>⚔️ Dag 14</h3>
+<p>Eerste PvP Event</p>
+</div>
+
+<div class="timeline-item">
+<h3>🏆 Dag 30</h3>
+<p>Season Event</p>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">Deelnemers</h2>
+
+<div class="players">
+
+<div class="player-card">
+<img src="https://mc-heads.net/avatar/Notch">
+<h3>Speler 1</h3>
+</div>
+
+<div class="player-card">
+<img src="https://mc-heads.net/avatar/Dream">
+<h3>Speler 2</h3>
+</div>
+
+<div class="player-card">
+<img src="https://mc-heads.net/avatar/Technoblade">
+<h3>Speler 3</h3>
+</div>
+
+<div class="player-card">
+<img src="https://mc-heads.net/avatar/Steve">
+<h3>Speler 4</h3>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+© 2025 Jouw SMP
+</footer>
+
+<script>
+
+const launchDate = new Date("2025-12-01T20:00:00").getTime();
+
+setInterval(() => {
+
+const now = new Date().getTime();
+const distance = launchDate - now;
+
+const days = Math.floor(distance/(1000*60*60*24));
+const hours = Math.floor((distance%(1000*60*60*24))/(1000*60*60));
+const minutes = Math.floor((distance%(1000*60*60))/(1000*60));
+
+document.getElementById("countdown").innerHTML =
+days + "d " + hours + "u " + minutes + "m";
+
+},1000);
+
+</script>
+
+</body>
+</html>
