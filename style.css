@@ -1,223 +1,151 @@
-/* =========================
-   RESET
-========================= */
-
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
 }
 
-html{
-    scroll-behavior:smooth;
-}
-
 body{
-    font-family:'Orbitron',sans-serif;
-    background:linear-gradient(
-        180deg,
-        #220000 0%,
-        #4b0000 50%,
-        #220000 100%
-    );
+    background:#0d1117;
     color:white;
-    overflow-x:hidden;
+    font-family:'Orbitron',sans-serif;
 }
-
-/* =========================
-   SCROLLBAR
-========================= */
-
-::-webkit-scrollbar{
-    width:10px;
-}
-
-::-webkit-scrollbar-track{
-    background:#180000;
-}
-
-::-webkit-scrollbar-thumb{
-    background:#f7c948;
-    border-radius:10px;
-}
-
-/* =========================
-   HEADER
-========================= */
 
 header{
-    min-height:100vh;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
     text-align:center;
-    padding:30px;
+    padding:80px 20px;
+    background:linear-gradient(180deg,#161b22,#0d1117);
 }
 
-h1{
-    font-size:5rem;
-    color:#f7c948;
-    text-shadow:
-    0 0 10px rgba(247,201,72,.8),
-    0 0 25px rgba(247,201,72,.5);
+header h1{
+    font-size:4rem;
+    font-weight:900;
+    color:#00ff88;
+    text-shadow:0 0 20px #00ff88;
 }
 
 .subtitle{
-    margin-top:15px;
-    color:#ddd;
-    font-size:1.2rem;
+    color:#b0b0b0;
+    margin-top:10px;
+    font-size:1rem;
 }
-
-/* =========================
-   COUNTDOWN
-========================= */
-
-.countdown{
-    margin-top:30px;
-    background:rgba(0,0,0,.35);
-    border:2px solid #f7c948;
-    border-radius:15px;
-    padding:20px 40px;
-    font-size:1.8rem;
-    font-weight:bold;
-    backdrop-filter:blur(10px);
-}
-
-/* =========================
-   BUTTON
-========================= */
 
 .discord-btn{
-    margin-top:25px;
+    display:inline-block;
+    margin-top:30px;
+    padding:14px 30px;
+    background:#5865F2;
+    color:white;
     text-decoration:none;
-    background:#f7c948;
-    color:black;
-    padding:15px 35px;
     border-radius:12px;
+    transition:0.3s;
     font-weight:bold;
-    transition:.3s;
 }
 
 .discord-btn:hover{
-    transform:translateY(-4px);
-    box-shadow:0 0 20px rgba(247,201,72,.7);
+    transform:scale(1.05);
 }
 
-/* =========================
-   SECTIONS
-========================= */
-
 section{
-    padding:100px 8%;
+    padding:60px 20px;
+    max-width:1200px;
+    margin:auto;
 }
 
 .section-title{
     text-align:center;
-    font-size:3rem;
-    margin-bottom:60px;
-    color:#f7c948;
+    font-size:2rem;
+    margin-bottom:50px;
+    color:#00ff88;
 }
 
-/* =========================
-   ROADMAP
-========================= */
-
-.roadmap{
-    padding:100px 20px;
-}
+/* TIMELINE */
 
 .timeline{
     position:relative;
     display:flex;
     justify-content:space-between;
-    gap:20px;
-    max-width:1200px;
-    margin:auto;
+    flex-wrap:wrap;
+    padding-top:50px;
 }
 
-.timeline::before{
-    content:"";
+.timeline-line{
     position:absolute;
-    top:30px;
-    left:10%;
-    width:80%;
-    height:6px;
-    background:#f7c948;
-    z-index:1;
+    top:60px;
+    left:0;
+    width:100%;
+    height:5px;
+    background:#333;
 }
 
-.step{
+.timeline-item{
     position:relative;
-    z-index:2;
-    flex:1;
+    width:160px;
     text-align:center;
+    z-index:2;
 }
 
-.circle{
-    width:65px;
-    height:65px;
+.timeline-dot{
+    width:28px;
+    height:28px;
     border-radius:50%;
-    border:4px solid #f7c948;
-    background:#1b1b1b;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    margin:auto;
-    font-size:24px;
-    margin-bottom:15px;
+    margin:0 auto 15px;
 }
 
-.active .circle{
-    background:#f7c948;
-    color:black;
+.completed .timeline-dot{
+    background:#00ff88;
+    box-shadow:0 0 20px #00ff88;
 }
 
-.step h3{
-    color:#f7c948;
-    margin-bottom:8px;
+.upcoming .timeline-dot{
+    background:#666;
 }
 
-.step p{
-    color:#ccc;
+.timeline-item h3{
+    font-size:14px;
+    margin-bottom:5px;
 }
 
-/* =========================
-   STATUS CARD
-========================= */
+.timeline-item p{
+    font-size:12px;
+    color:#aaa;
+}
+
+/* STATUS CARD */
 
 .status-card{
-    max-width:500px;
+    max-width:450px;
     margin:auto;
-    background:rgba(0,0,0,.35);
+    background:#161b22;
     padding:30px;
     border-radius:20px;
     text-align:center;
-    backdrop-filter:blur(10px);
+    border:1px solid #2c313a;
+}
+
+.status-card h3{
+    margin-bottom:15px;
 }
 
 .online{
-    color:lime;
+    color:#00ff88;
+    font-size:1.2rem;
     font-weight:bold;
 }
 
-/* =========================
-   PLAYERS
-========================= */
+/* PLAYERS */
 
 .players{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
     gap:25px;
 }
 
 .player-card{
-    background:rgba(0,0,0,.35);
+    background:#161b22;
     border-radius:20px;
-    padding:15px;
+    padding:20px;
     text-align:center;
-    transition:.3s;
-    backdrop-filter:blur(10px);
+    transition:0.3s;
 }
 
 .player-card:hover{
@@ -225,74 +153,46 @@ section{
 }
 
 .player-card img{
-    width:100%;
+    width:90px;
+    height:90px;
     border-radius:12px;
+    margin-bottom:15px;
 }
 
 .player-card h3{
-    margin-top:15px;
+    font-size:1rem;
 }
 
-/* =========================
-   FOOTER
-========================= */
+/* FOOTER */
 
 footer{
-    background:#150000;
-    padding:40px;
     text-align:center;
-    border-top:2px solid #f7c948;
+    padding:40px;
+    color:#777;
+    border-top:1px solid #222;
+    margin-top:40px;
 }
 
-/* =========================
-   ANIMATIES
-========================= */
-
-@keyframes fadeUp{
-
-    from{
-        opacity:0;
-        transform:translateY(40px);
-    }
-
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
-
-}
-
-.player-card,
-.status-card,
-.step{
-    animation:fadeUp .8s ease;
-}
-
-/* =========================
-   MOBILE
-========================= */
+/* MOBILE */
 
 @media(max-width:900px){
 
     .timeline{
         flex-direction:column;
         align-items:center;
+        gap:40px;
     }
 
-    .timeline::before{
+    .timeline-line{
         display:none;
     }
 
-    h1{
-        font-size:3rem;
+    .timeline-item{
+        width:100%;
+        max-width:250px;
     }
 
-    .section-title{
-        font-size:2rem;
+    header h1{
+        font-size:2.8rem;
     }
-
-    .countdown{
-        font-size:1.3rem;
-    }
-
 }
